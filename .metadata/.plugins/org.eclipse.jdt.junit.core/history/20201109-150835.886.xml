@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StepRunner" project="MobileTestDemoBDD" tests="15" started="15" failures="2" errors="0" ignored="0">
+  <testsuite name="StepRunner.StepRunner" time="12.262">
+    <testsuite name="Feature: Test mobile apps" time="12.262">
+      <testsuite name="Scenario: Test radio buttons" time="12.262" incomplete="true">
+        <failure>java.lang.AssertionError: expected [Your choice: 168] but found [Your choice: 176]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at StepDefinition.StepDefinition.your_choice_224_is_displayed(StepDefinition.java:132)
+	at ✽.And Your choice: 224 is displayed(test1.feature:36)
+
+</failure>
+        <testcase name="Given I launch the app" classname="Scenario: Test radio buttons" time="1.624"/>
+        <testcase name="When I click on OK" classname="Scenario: Test radio buttons" time="0.655"/>
+        <testcase name="Then App should start" classname="Scenario: Test radio buttons" time="0.672"/>
+        <testcase name="When I click on One radio button" classname="Scenario: Test radio buttons" time="0.897"/>
+        <testcase name="And I click on apply button1" classname="Scenario: Test radio buttons" time="0.934"/>
+        <testcase name="Then That One radio button is selected" classname="Scenario: Test radio buttons" time="0.651"/>
+        <testcase name="And Your choice: 0 is displayed" classname="Scenario: Test radio buttons" time="0.695"/>
+        <testcase name="When I click on Two radio button" classname="Scenario: Test radio buttons" time="0.869"/>
+        <testcase name="And I click on apply button2" classname="Scenario: Test radio buttons" time="0.929"/>
+        <testcase name="Then That Two radio button is selected" classname="Scenario: Test radio buttons" time="0.604"/>
+        <testcase name="And Your choice: 124 is displayed" classname="Scenario: Test radio buttons" time="0.667"/>
+        <testcase name="When I click on Three radio button" classname="Scenario: Test radio buttons" time="0.87"/>
+        <testcase name="And I click on apply button3" classname="Scenario: Test radio buttons" time="1.511"/>
+        <testcase name="Then That Three radio button is selected" classname="Scenario: Test radio buttons" time="0.682"/>
+        <testcase name="And Your choice: 224 is displayed" classname="Scenario: Test radio buttons" time="0.002">
+          <failure>java.lang.AssertionError: expected [Your choice: 168] but found [Your choice: 176]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at StepDefinition.StepDefinition.your_choice_224_is_displayed(StepDefinition.java:132)
+	at ✽.And Your choice: 224 is displayed(test1.feature:36)
+
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

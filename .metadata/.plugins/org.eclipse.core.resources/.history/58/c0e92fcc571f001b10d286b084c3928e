@@ -1,0 +1,96 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class LoginRegistration {
+
+	static AppiumDriver<MobileElement> driver = null;
+
+	@Test(priority = 0)
+	public void init() {
+		// Set the Desired Capabilities
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+
+		caps.setCapability("deviceName", "My Phone");
+
+		caps.setCapability("udid", "5c9d5660"); // Give Device ID of your mobile phone
+
+		caps.setCapability("platformName", "Android");
+
+		caps.setCapability("platformVersion", "10.0");
+
+		caps.setCapability("app", "/home/milind/Downloads/Login Registration Example_v3.0_apkpure.com.apk");
+
+		caps.setCapability("noReset", "true");
+
+		// Instantiate Appium Driver
+
+		try {
+
+			driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+
+		} catch (MalformedURLException e) {
+
+			System.out.println(e.getMessage());
+
+		}
+	}
+	
+	@Test(dependsOnMethods = "init", priority = 1)
+	public void register() throws InterruptedException {
+		driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.ListView/android.widget.RelativeLayout[1]/android.widget.TextView")).click();
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/register")).click();
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextUserName")).sendKeys("Milind4526");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextPassword")).sendKeys("milind11");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextConfirmPassword")).sendKeys("milind11");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/buttonCreateAccount")).click();
+	}
+	
+	@Test(dependsOnMethods = "register", priority = 2)
+	public void login() throws InterruptedException {
+		driver.navigate().back();
+		driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.ListView/android.widget.RelativeLayout[1]/android.widget.TextView")).click();
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/register")).click();
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextUserName")).sendKeys("Milind4526");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextPassword")).sendKeys("milind11");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editTextConfirmPassword")).sendKeys("milind11");
+		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/buttonCreateAccount")).click();
+	}
+
+//	@Test(dependsOnMethods = "init", priority = 2)
+//	public void login() throws InterruptedException {
+//		Thread.sleep(5000);
+//		System.out.println("1");
+//		driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.ListView/android.widget.RelativeLayout[1]/android.widget.TextView")).click();
+//		Thread.sleep(5000);
+//		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editLogin")).clear();
+//		System.out.println("2");
+//		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editLogin")).sendKeys("mohapatra.milind@gmail.com");
+//		System.out.println("3");
+//		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/editPasswordLogin")).sendKeys("milind11");
+//		
+//		System.out.println("4");Thread.sleep(5000);
+////		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/register")).click();
+//		driver.findElement(By.id("com.appsgallery.sagar.loginregistrationexample:id/login")).click();
+//		System.out.println("5");
+////		String result = driver.findElement(By.id("com.google.android.calculator:id/result_final")).getText();
+////		System.out.println(result);
+//		
+//		String actual = driver.findElement(By.id("com.google.android.calculator:id/result_final")).getText();
+//		String expected = "10";
+//		Assert.assertEquals(actual, expected);
+//	}
+
+}
+

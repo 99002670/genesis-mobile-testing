@@ -1,0 +1,79 @@
+package StepDefinition;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+public class StepDefinition {
+
+    @Given("^Ilaunch the app$")
+    public void ilaunch_the_app() throws Throwable {
+        throw new PendingException();
+    }
+
+    @When("^I click on One radio button$")
+    public void i_click_on_one_radio_button() throws Throwable {
+        throw new PendingException();
+    }
+
+    @When("^I click on Two radio button$")
+    public void i_click_on_two_radio_button() throws Throwable {
+        throw new PendingException();
+    }
+
+    @When("^I click on Three radio button$")
+    public void i_click_on_three_radio_button() throws Throwable {
+        throw new PendingException();
+    }
+
+    @Then("^That One radio button is selected$")
+    public void that_one_radio_button_is_selected() throws Throwable {
+        throw new PendingException();
+    }
+
+    @Then("^That Two radio button is selected$")
+    public void that_two_radio_button_is_selected() throws Throwable {
+        throw new PendingException();
+    }
+
+    @Then("^That Three radio button is selected$")
+    public void that_three_radio_button_is_selected() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^I click on apply button1$")
+    public void i_click_on_apply_button1() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^Your choice: 0 is displayed$")
+    public void your_choice_0_is_displayed() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^I click on apply button2$")
+    public void i_click_on_apply_button2() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^Your choice: 124 is displayed$")
+    public void your_choice_124_is_displayed() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^I click on apply button3$")
+    public void i_click_on_apply_button3() throws Throwable {
+        throw new PendingException();
+    }
+
+    @And("^Your choice: 224 is displayed$")
+    public void your_choice_224_is_displayed() throws Throwable {
+        throw new PendingException();
+    }
+
+}

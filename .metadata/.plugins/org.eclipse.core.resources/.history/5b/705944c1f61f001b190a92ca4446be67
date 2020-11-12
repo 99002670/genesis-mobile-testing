@@ -1,0 +1,52 @@
+package WhatsappAutomation;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class SendMessage {
+	static AppiumDriver<MobileElement> driver = null;
+
+	@Test(priority = 0)
+	public void init() throws InterruptedException {
+		// Set the Desired Capabilities
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+
+		caps.setCapability("deviceName", "My Phone");
+
+//		caps.setCapability("udid", "5c9d5660"); // Give Device ID of your mobile phone
+		caps.setCapability("udid", "10.42.0.86:5555"); //Give wireless Device ID of your mobile phone
+
+		caps.setCapability("platformName", "Android");
+
+		caps.setCapability("platformVersion", "10.0");
+
+		caps.setCapability("app", "/home/milind/Downloads/Calculator_v7.8 (271241277)_apkpure.com.apk");
+
+		caps.setCapability("appPackage", "com.whatsapp");
+		
+		caps.setCapability("appActivity", "com.whatsapp.HomeActivity");
+		
+		caps.setCapability("noReset", "true");
+
+		// Instantiate Appium Driver
+
+		try {
+
+			driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+
+		} catch (MalformedURLException e) {
+
+			System.out.println(e.getMessage());
+
+		}		
+	}
+}

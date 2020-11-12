@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StepRunner" project="MobileTestDemoBDD" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="StepRunner.StepRunner" time="6.319">
+    <testsuite name="Feature: Test mobile apps" time="6.319">
+      <testsuite name="Scenario: Test radio buttons" time="6.319">
+        <testcase name="Given I launch the app" classname="Scenario: Test radio buttons" time="0.641"/>
+        <testcase name="When I click on OK" classname="Scenario: Test radio buttons" time="0.636"/>
+        <testcase name="Then App should start" classname="Scenario: Test radio buttons" time="0.171"/>
+        <testcase name="When I click on One radio button" classname="Scenario: Test radio buttons" time="0.615"/>
+        <testcase name="And I click on apply button1" classname="Scenario: Test radio buttons" time="0.755"/>
+        <testcase name="Then That One radio button is selected" classname="Scenario: Test radio buttons" time="0.152"/>
+        <testcase name="And Your choice: 0 is displayed" classname="Scenario: Test radio buttons" time="0.16"/>
+        <testcase name="When I click on Two radio button" classname="Scenario: Test radio buttons" time="0.622"/>
+        <testcase name="And I click on apply button2" classname="Scenario: Test radio buttons" time="0.698"/>
+        <testcase name="Then That Two radio button is selected" classname="Scenario: Test radio buttons" time="0.143"/>
+        <testcase name="And Your choice: 124 is displayed" classname="Scenario: Test radio buttons" time="0.189"/>
+        <testcase name="When I click on Three radio button" classname="Scenario: Test radio buttons" time="0.682"/>
+        <testcase name="And I click on apply button3" classname="Scenario: Test radio buttons" time="0.699"/>
+        <testcase name="Then That Three radio button is selected" classname="Scenario: Test radio buttons" time="0.149"/>
+        <testcase name="And Your choice: 224 is displayed" classname="Scenario: Test radio buttons" time="0.007"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
